@@ -24,4 +24,13 @@ router.put("/api/burg/:id", function(req, res){
         res.status(200).json(response);
     })
 })
+
+router.get("/", function(req, res){
+    burger.all("Burgers", function(data){
+        var burgersObject = {
+            burgers: data
+        }
+        res.render("index", burgersObject);
+    })
+})
 module.exports = router;

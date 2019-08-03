@@ -58,13 +58,7 @@ var orm = {
             cb(rez);
         });
     },
-    delete: function(table, conditon, cb){
-        var queryString = "DELETE FROM " + tale + " WHERE " + conditon;
-        console.log(queryString);
-        connection.query(queryString, function(err, rez){
-            cb(rez);
-        })
-    }
+    
 };
 
 module.exports = orm;
